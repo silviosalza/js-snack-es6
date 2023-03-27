@@ -58,13 +58,22 @@ function getRandomInt(min, max) {
     return element
   })
 
-  teamFoul =[]
-  for(i = 0; i <= teams.length; i++){
-      const {nome ,punti, falli} = teams[i]
-      teamFoul.push(nome,falli)
-      console.log(nome);
-      console.log(falli);
-  }
-  console.log(teamFoul);
+  const newTeams = teams.map(({nome, falli}) => {
+    
+    return {
+        nome,
+        falli
+    }
+  })
+  console.log(newTeams);
+
+//   teamFoul =[]
+//   for(i = 0; i <= teams.length; i++){
+//       const {nome ,punti, falli} = teams[i]
+//       teamFoul.push(nome,falli)
+//       console.log(nome);
+//       console.log(falli);
+//   }
+//   console.log(teamFoul);
   
  
